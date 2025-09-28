@@ -1,418 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visionary - iOS Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visionary - iOS Developer</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1d1d1f;
-            background: #f5f5f7;
-        }
+  <!-- SEO -->
+  <meta name="description" content="Visionary AI Labs builds sleek iOS apps like GCSE Scholar and Smart-Pocket. Clean design, smart tools, and powerful everyday utilities at affordable prices." />
+  <meta name="keywords" content="iOS apps, GCSE Scholar, Smart-Pocket, Visionary AI Labs, affordable apps, utilities, productivity apps, student apps">
+  <meta name="author" content="Visionary AI Labs" />
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Visionary - iOS Developer" />
+  <meta property="og:description" content="Explore affordable iOS apps built by Visionary AI Labs: GCSE Scholar and Smart-Pocket." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-github-pages-link" />
+  <meta property="og:image" content="https://your-github-pages-link/preview.png" />
 
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Visionary - iOS Developer">
+  <meta name="twitter:description" content="Explore affordable iOS apps built by Visionary AI Labs: GCSE Scholar and Smart-Pocket.">
+  <meta name="twitter:image" content="https://your-github-pages-link/preview.png">
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-        .logo {
-            font-size: 32px;
-            font-weight: 600;
-            color: #1d1d1f;
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #1d1d1f;
+      background: #f5f5f7;
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #1d1d1f;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        .nav-links a:hover {
-            color: #007aff;
-        }
+    /* Header */
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: sticky; top: 0; z-index: 100;
+    }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+    .logo { font-size: 32px; font-weight: 600; color: #1d1d1f; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { text-decoration: none; color: #1d1d1f; font-weight: 400; transition: color 0.3s ease; }
+    .nav-links a:hover { color: #007aff; }
 
-        /* Hero Section */
-        .hero {
-            background: white;
-            color: #1d1d1f;
-            text-align: center;
-            padding: 60px 0 40px;
-        }
+    /* Hero */
+    .hero { background: white; color: #1d1d1f; text-align: center; padding: 60px 0 40px; }
+    .hero h1 { font-size: 36px; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.5px; }
+    .hero p { font-size: 18px; color: #6e6e73; max-width: 700px; margin: 0 auto; }
 
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-        }
+    /* Apps */
+    .apps-section { padding: 80px 0; background: white; }
+    .section-title { text-align: center; font-size: 36px; font-weight: 600; margin-bottom: 60px; color: #1d1d1f; }
+    .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
 
-        .hero p {
-            font-size: 18px;
-            color: #6e6e73;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .app-card {
+      background: #f8f8f8; border-radius: 20px; padding: 40px; text-align: center;
+      transition: all 0.4s ease; border: 1px solid rgba(0, 0, 0, 0.05);
+      opacity: 0; transform: translateY(30px); animation: fadeInUp 0.6s ease forwards;
+    }
+    .app-card:nth-child(1) { animation-delay: 0.1s; }
+    .app-card:nth-child(2) { animation-delay: 0.2s; }
+    .app-card:nth-child(3) { animation-delay: 0.3s; }
+    .app-card:nth-child(4) { animation-delay: 0.4s; }
+    .app-card:nth-child(5) { animation-delay: 0.5s; }
+    .app-card:nth-child(6) { animation-delay: 0.6s; }
 
-        .cta-button {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    .app-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1); }
 
-        .cta-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
+    .app-icon {
+      width: 120px; height: 120px; background: linear-gradient(135deg, #007aff, #0051d0);
+      border-radius: 25px; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center;
+      font-size: 48px; color: white; box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
+    }
+    .app-title { font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1d1d1f; }
+    .app-description { font-size: 16px; color: #6e6e73; line-height: 1.6; margin-bottom: 25px; }
 
-        /* Apps Section */
-        .apps-section {
-            padding: 80px 0;
-            background: white;
-        }
+    .app-store-button {
+      display: inline-flex; align-items: center; background: #000; color: white;
+      padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 500;
+      transition: all 0.3s ease; margin-top: 10px;
+    }
+    .app-store-button:hover { background: #333; transform: translateY(-1px); }
+    .app-store-button::before { content: "📱"; margin-right: 8px; }
 
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 60px;
-            color: #1d1d1f;
-        }
+    .app-store-button.disabled {
+      background: #999; cursor: not-allowed; opacity: 0.7;
+    }
+    .app-store-button.disabled:hover { background: #999; transform: none; }
 
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
+    .tc-link {
+      display: block; margin-top: 15px; font-size: 13px; color: #6e6e73;
+      text-decoration: underline; cursor: pointer; transition: color 0.2s ease;
+    }
+    .tc-link:hover { color: #007aff; }
 
-        .app-card {
-            background: #f8f8f8;
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            transition: all 0.4s ease;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
+    /* About */
+    .about-section { padding: 80px 0; background: #ffffff; }
+    .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+    .about-content p { font-size: 18px; color: #1d1d1f; margin-bottom: 30px; }
 
-        .app-card:nth-child(1) { animation-delay: 0.1s; }
-        .app-card:nth-child(2) { animation-delay: 0.2s; }
-        .app-card:nth-child(3) { animation-delay: 0.3s; }
-        .app-card:nth-child(4) { animation-delay: 0.4s; }
-        .app-card:nth-child(5) { animation-delay: 0.5s; }
-        .app-card:nth-child(6) { animation-delay: 0.6s; }
+    /* Terms */
+    .terms-section { padding: 80px 20px; background: #f9f9f9; }
+    .terms-section .container { max-width: 800px; margin: 0 auto; }
+    .terms-section h2 { font-size: 28px; font-weight: 600; margin-bottom: 20px; text-align: center; }
+    .terms-section p { font-size: 15px; color: #444; line-height: 1.7; margin-bottom: 15px; }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    /* Footer */
+    footer { background: white; color: #6e6e73; text-align: center; padding: 40px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    .contact-info { margin-top: 20px; text-align: center; }
+    .contact-info h3 { font-size: 24px; font-weight: 600; color: #1d1d1f; margin-bottom: 15px; }
+    .contact-info p { font-size: 16px; color: #6e6e73; margin-bottom: 10px; }
 
-        .app-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-        }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .apps-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    
+    .about-content p {
+      font-size: 18px;
+      color: #1d1d1f;
+      margin-bottom: 15px; /* was 30px, now tighter */
+    }
 
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #007aff, #0051d0);
-            border-radius: 25px;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            color: white;
-            box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
-        }
 
-        .app-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #1d1d1f;
-        }
-
-        .app-description {
-            font-size: 16px;
-            color: #6e6e73;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .app-store-button {
-            display: inline-flex;
-            align-items: center;
-            background: #000;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .app-store-button:hover {
-            background: #333;
-            transform: translateY(-1px);
-        }
-
-        .app-store-button::before {
-            content: "📱";
-            margin-right: 8px;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 80px 0;
-            background: #ffffff; /* white background */
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-content p {
-            font-size: 18px;
-            color: #1d1d1f; /* white text */
-            margin-bottom: 30px;
-        }
-
-        /* Footer */
-        footer {
-            background: white;
-            color: #6e6e73;
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .footer-links a {
-            color: #a1a1a6;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        /* Contact Section */
-        .contact-info {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .contact-info h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 15px;
-        }
-
-        .contact-info p {
-            font-size: 16px;
-            color: #6e6e73;
-            margin-bottom: 10px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .apps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+  </style>
 </head>
 <body>
 
 <header>
-    <div class="container">
-        <nav>
-            <div class="logo">Visionary</div>
-            <ul class="nav-links">
-                <li><a href="#apps">Apps</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container">
+    <nav>
+      <div class="logo">Visionary</div>
+      <ul class="nav-links">
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-    <div class="container">
-        <h1>Building Sleek iOS Apps</h1>
-        <p>Clean execution, smart design, and powerful tools for everyday life 🚀</p>
-    </div>
+  <div class="container">
+    <h1>Building Sleek iOS Apps</h1>
+    <p>Clean execution, smart design, and powerful tools for everyday life 🚀 — built to be affordable, never overpriced.</p>
+  </div>
 </section>
 
 <section class="apps-section" id="apps">
-    <div class="container">
-        <h2 class="section-title">My iOS Apps</h2>
-        <div class="apps-grid">
+  <div class="container">
+    <h2 class="section-title">My iOS Apps</h2>
+    <div class="apps-grid">
 
-            <!-- GCSE Scholar -->
-            <div class="app-card">
-                <div class="app-icon">🧠</div>
-                <h3 class="app-title">GCSE Scholar</h3>
-                <p class="app-description">
-                    GCSE Scholar is an iOS app for GCSE students, offering quizzes and flashcards in subjects like Math, Sciences, Languages, and more. With customizable settings, progress tracking, and a user-friendly interface, it’s perfect for exam prep.
-                </p>
-            </div>
+      <!-- GCSE Scholar -->
+      <div class="app-card">
+        <div class="app-icon">🧠</div>
+        <h3 class="app-title">GCSE Scholar</h3>
+        <p class="app-description">
+          GCSE Scholar is an iOS app for GCSE students, offering quizzes and flashcards in subjects like Math, Sciences, Languages, and more. With customizable settings, progress tracking, and a user-friendly interface, it’s perfect for exam prep.
+        </p>
+        <a href="#" class="app-store-button">Download on App Store</a>
+        <a href="#terms" class="tc-link">Terms &amp; Conditions</a>
+      </div>
 
-            <!-- Smart-Pocket -->
-            <div class="app-card">
-                <div class="app-icon">🛠️</div>
-                <h3 class="app-title">Smart-Pocket</h3>
-                <p class="app-description">
-                    Smart-Pocket is your all-in-one pocket utility app. From productivity tools like notes, to-dos, and password generators,
-                    to everyday essentials like calculators, converters, weather, flashcards, and finance trackers — it simplifies daily life
-                    in one sleek, easy-to-use package.
-                </p>
-            </div>
+      <!-- Smart-Pocket -->
+      <div class="app-card">
+        <div class="app-icon">🛠️</div>
+        <h3 class="app-title">Smart-Pocket</h3>
+        <p class="app-description">
+          Smart-Pocket is your all-in-one pocket utility app. From productivity tools like notes, to-dos, and password generators,
+          to everyday essentials like calculators, converters, weather, flashcards, and finance trackers — it simplifies daily life
+          in one sleek, easy-to-use package.
+        </p>
+        <a href="#" class="app-store-button">Download on App Store</a>
+        <a href="#terms" class="tc-link">Terms &amp; Conditions</a>
+      </div>
 
-            <!-- Placeholder cards -->
-            <div class="app-card">
-                <div class="app-icon">❓</div>
-                <h3 class="app-title">Not Released Yet!</h3>
-                <p class="app-description" style="opacity: 0;">...</p>
-            </div>
+      <!-- Coming Soon placeholders -->
+      <div class="app-card">
+        <div class="app-icon">❓</div>
+        <h3 class="app-title">Coming Soon</h3>
+        <p class="app-description">Stay tuned for our next release.</p>
+        <span class="app-store-button disabled">Coming Soon</span>
+      </div>
 
-            <div class="app-card">
-                <div class="app-icon">❓</div>
-                <h3 class="app-title">Not Released Yet!</h3>
-                <p class="app-description" style="opacity: 0;">...</p>
-            </div>
+      <div class="app-card">
+        <div class="app-icon">❓</div>
+        <h3 class="app-title">Coming Soon</h3>
+        <p class="app-description">Stay tuned for our next release.</p>
+        <span class="app-store-button disabled">Coming Soon</span>
+      </div>
 
-            <div class="app-card">
-                <div class="app-icon">❓</div>
-                <h3 class="app-title">Not Released Yet!</h3>
-                <p class="app-description" style="opacity: 0;">...</p>
-            </div>
+      <div class="app-card">
+        <div class="app-icon">❓</div>
+        <h3 class="app-title">Coming Soon</h3>
+        <p class="app-description">Stay tuned for our next release.</p>
+        <span class="app-store-button disabled">Coming Soon</span>
+      </div>
 
-            <div class="app-card">
-                <div class="app-icon">❓</div>
-                <h3 class="app-title">Not Released Yet!</h3>
-                <p class="app-description" style="opacity: 0;">...</p>
-            </div>
+      <div class="app-card">
+        <div class="app-icon">❓</div>
+        <h3 class="app-title">Coming Soon</h3>
+        <p class="app-description">Stay tuned for our next release.</p>
+        <span class="app-store-button disabled">Coming Soon</span>
+      </div>
 
-        </div>
     </div>
+  </div>
 </section>
 
 <section class="about-section" id="about">
-    <div class="container">
-        <h2 class="section-title">Who We Are</h2>
-        <div class="about-content">
-            <p>
-                Hey! We’re Visionary AI Labs — a team of traders, coders, and entrepreneurs building dope digital experiences 💻📈.
-                From sleek iOS apps to strategic market plays, we’re all about clean execution, smart design, and real results.
-                Let’s build the future, one idea at a time 🚀.
-            </p>
-        </div>
+  <div class="container">
+    <h2 class="section-title">The Vision</h2>
+    <div class="about-content">
+      <p>
+        At Visionary AI Labs, we design and build sleek iOS apps that combine clean execution, smart design, and real results.
+      </p>
+      <p>
+        Our focus is simple: create powerful digital tools that remain accessible and affordable to everyone.
+      </p>
+      <p>
+        We believe in building the future one idea at a time 🚀.
+      </p>
     </div>
+  </div>
+</section>
+
+
+
+<!-- Terms & Conditions -->
+<section class="terms-section" id="terms">
+  <div class="container">
+    <h2>Terms &amp; Conditions</h2>
+    <p><strong>Apps developed by VisionaryAI Labs respect your privacy. This policy explains how the apps handle your data.</strong></p>
+
+    <p><strong>1. Data Collection</strong><br>
+    Our apps do not collect, store, or share any personal data. All information remains on your device.</p>
+
+    <p><strong>2. Tools That Use Device Features</strong><br>
+    <em>Camera:</em> Used for QR scanning, magnifier, and card capture. Images are processed locally and not shared.<br>
+    <em>Microphone:</em> Used for the voice recorder tool. Recordings stay on your device.<br>
+    <em>Face ID / Touch ID:</em> Used only to secure access to the app. Biometric data never leaves your device.<br>
+    <em>Clipboard:</em> The clipboard manager only stores copied items locally.<br>
+    <em>Network Access:</em> Some tools fetch data (currency rates, crypto, weather, IP info) from third-party public APIs. No personal information is transmitted.</p>
+
+    <p><strong>3. Third-Party Services</strong><br>
+    Our apps may connect to public APIs (e.g., currency exchange, weather). These services may receive standard network requests but no personal user data.</p>
+
+    <p><strong>4. Children’s Privacy</strong><br>
+    Our apps are suitable for all ages and do not target children with any data collection.</p>
+
+    <p><strong>5. Contact</strong><br>
+    If you have questions about this Privacy Policy, contact:<br>
+    Email: visionaryailabs1@gmail.com</p>
+  </div>
 </section>
 
 <footer id="contact">
-    <div class="container">
-        <p>&copy; 2025 Visionary AI Labs Apps. All rights reserved.</p>
-        <div class="contact-info">
-            <h3>Support</h3>
-            <p>Have questions about our apps? Contact us!</p>
-            <p>Phone: +44 7595 003 096</p>
-            <p>Email: visionaryailabs1@gmail.com</p>
-        </div>
+  <div class="container">
+    <p>&copy; 2025 Visionary AI Labs Apps. All rights reserved.</p>
+    <div class="contact-info">
+      <h3>Support</h3>
+      <p>Have questions about our apps? Contact us!</p>
+      <p>Phone: +44 7595 003 096</p>
+      <p>Email: visionaryailabs1@gmail.com</p>
     </div>
+    <p style="margin-top:10px; font-size:14px; color:#6e6e73;">
+      Our promise: powerful apps, fair prices.
+    </p>
+  </div>
 </footer>
 
 <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
     });
+  });
 
-    // Add scroll effect to header
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.8)';
-        }
-    });
+  // Add scroll effect to header
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+      header.style.background = 'rgba(255, 255, 255, 0.95)';
+    } else {
+      header.style.background = 'rgba(255, 255, 255, 0.8)';
+    }
+  });
 </script>
 
 </body>
