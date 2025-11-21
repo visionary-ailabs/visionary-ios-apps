@@ -1,162 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Visionary - iOS Developer</title>
+
+  <title>iOS Apps by V.I.S.I.O.N</title>
 
   <!-- SEO -->
-  <meta name="description" content="Visionary AI Labs builds sleek iOS apps like GCSE Scholar and Smart-Pocket. Clean design, smart tools, and powerful everyday utilities at affordable prices." />
-  <meta name="keywords" content="iOS apps, GCSE Scholar, Smart-Pocket, Visionary AI Labs, affordable apps, utilities, productivity apps, student apps">
-  <meta name="author" content="Visionary AI Labs" />
+  <meta name="description" content="Premium iOS apps built with precision, clean design, and real everyday utility — including Smart-Pocket, GCSE Scholar, and more."/>
+  <meta name="keywords" content="iOS apps, Smart-Pocket, GCSE Scholar, utilities, productivity, Visionary apps">
+  <meta name="author" content="V.I.S.I.O.N"/>
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Visionary - iOS Developer" />
-  <meta property="og:description" content="Explore affordable iOS apps built by Visionary AI Labs: GCSE Scholar and Smart-Pocket." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://your-github-pages-link" />
-  <meta property="og:image" content="https://your-github-pages-link/preview.png" />
+  <meta property="og:title" content="iOS Apps by V.I.S.I.O.N"/>
+  <meta property="og:description" content="Explore premium iOS apps including Smart-Pocket and GCSE Scholar — clean, powerful, and built with purpose."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="preview.png"/>
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Visionary - iOS Developer">
-  <meta name="twitter:description" content="Explore affordable iOS apps built by Visionary AI Labs: GCSE Scholar and Smart-Pocket.">
-  <meta name="twitter:image" content="https://your-github-pages-link/preview.png">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+  <!-- Styles -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      color: #1d1d1f;
-      background: #f5f5f7;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f6f7;
+      color: #111;
     }
 
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    /* Header */
+    /* NAV */
     header {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(22px);
+      background: rgba(255, 255, 255, 0.7);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
       position: sticky; top: 0; z-index: 100;
     }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-    .logo { font-size: 32px; font-weight: 600; color: #1d1d1f; }
-    .nav-links { display: flex; gap: 30px; list-style: none; }
-    .nav-links a { text-decoration: none; color: #1d1d1f; font-weight: 400; transition: color 0.3s ease; }
-    .nav-links a:hover { color: #007aff; }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0;
+    }
+    .logo { font-size: 28px; font-weight: 600; color: #111; }
 
-    /* Hero */
-    .hero { background: white; color: #1d1d1f; text-align: center; padding: 60px 0 40px; }
-    .hero h1 { font-size: 36px; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.5px; }
-    .hero p { font-size: 18px; color: #6e6e73; max-width: 700px; margin: 0 auto; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav a {
+      text-decoration: none; color: #111; font-weight: 500;
+      transition: 0.25s ease;
+    }
+    nav a:hover { color: #007aff; }
 
-    /* Apps */
-    .apps-section { padding: 80px 0; background: white; }
-    .section-title { text-align: center; font-size: 36px; font-weight: 600; margin-bottom: 60px; color: #1d1d1f; }
-    .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 100px 0 70px;
+      background: linear-gradient(to bottom, #ffffff, #f5f6f7);
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #555;
+    }
+    .divider {
+      width: 100px; height: 4px; background: #007aff;
+      margin: 35px auto 0; border-radius: 4px;
+    }
+
+    /* APPS */
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 40px;
+    }
 
     .app-card {
-      background: #f8f8f8; border-radius: 20px; padding: 40px; text-align: center;
-      transition: all 0.4s ease; border: 1px solid rgba(0, 0, 0, 0.05);
-      opacity: 0; transform: translateY(30px); animation: fadeInUp 0.6s ease forwards;
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      border: 1px solid rgba(0,0,0,0.07);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+      transition: 0.3s ease;
     }
-    .app-card:nth-child(1) { animation-delay: 0.1s; }
-    .app-card:nth-child(2) { animation-delay: 0.2s; }
-    .app-card:nth-child(3) { animation-delay: 0.3s; }
-    .app-card:nth-child(4) { animation-delay: 0.4s; }
-    .app-card:nth-child(5) { animation-delay: 0.5s; }
-    .app-card:nth-child(6) { animation-delay: 0.6s; }
-
-    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-    .app-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1); }
-
-    .app-icon {
-      width: 120px; height: 120px; background: linear-gradient(135deg, #007aff, #0051d0);
-      border-radius: 25px; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center;
-      font-size: 48px; color: white; box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
+    .app-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 35px rgba(0,0,0,0.12);
     }
-    .app-title { font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1d1d1f; }
-    .app-description { font-size: 16px; color: #6e6e73; line-height: 1.6; margin-bottom: 25px; }
 
+    .app-top {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+    .icon-box {
+      width: 90px; height: 90px;
+      border-radius: 22px;
+      background: #007aff;
+      display: flex; justify-content: center; align-items: center;
+      font-size: 46px; color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .app-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .app-card p {
+      color: #555; font-size: 16px; line-height: 1.6; margin: 20px 0;
+    }
+
+    /* APP STORE BUTTON */
     .app-store-button {
-      display: inline-flex; align-items: center; background: #000; color: white;
-      padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 500;
-      transition: all 0.3s ease; margin-top: 10px;
+      background: #000;
+      padding: 12px 20px;
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+      transition: 0.2s ease;
     }
-    .app-store-button:hover { background: #333; transform: translateY(-1px); }
-    .app-store-button::before { content: "📱"; margin-right: 8px; }
+    .app-store-button:hover { background: #333; transform: translateY(-2px); }
 
-    .app-store-button.disabled {
-      background: #999; cursor: not-allowed; opacity: 0.7;
+    /* QR BLOCK */
+    .qr-block { text-align: center; margin-top: 25px; }
+    .qr-block img {
+      width: 150px; border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+      transition: 0.25s ease;
     }
-    .app-store-button.disabled:hover { background: #999; transform: none; }
+    .qr-block img:hover { transform: scale(1.05); }
 
-    .tc-link {
-      display: block; margin-top: 15px; font-size: 13px; color: #6e6e73;
-      text-decoration: underline; cursor: pointer; transition: color 0.2s ease;
+    /* VISION SECTION */
+    .vision-section {
+      padding: 100px 20px;
+      background: white;
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
-    .tc-link:hover { color: #007aff; }
-
-    /* About */
-    .about-section { padding: 80px 0; background: #ffffff; }
-    .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
-    .about-content p { font-size: 18px; color: #1d1d1f; margin-bottom: 30px; }
-
-    /* Terms */
-    .terms-section { padding: 80px 20px; background: #f9f9f9; }
-    .terms-section .container { max-width: 800px; margin: 0 auto; }
-    .terms-section h2 { font-size: 28px; font-weight: 600; margin-bottom: 20px; text-align: center; }
-    .terms-section p { font-size: 15px; color: #444; line-height: 1.7; margin-bottom: 15px; }
-
-    /* Footer */
-    footer { background: white; color: #6e6e73; text-align: center; padding: 40px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); }
-    .contact-info { margin-top: 20px; text-align: center; }
-    .contact-info h3 { font-size: 24px; font-weight: 600; color: #1d1d1f; margin-bottom: 15px; }
-    .contact-info p { font-size: 16px; color: #6e6e73; margin-bottom: 10px; }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 32px; }
-      .hero p { font-size: 16px; }
-      .apps-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+    .vision-content {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
     }
-    
-    .about-content p {
+    .vision-content h2 {
+      font-size: 38px; margin-bottom: 30px;
+    }
+    .vision-content p {
       font-size: 18px;
-      color: #1d1d1f;
-      margin-bottom: 15px; /* was 30px, now tighter */
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 25px;
     }
 
-.qr-block {
-  margin-top: 20px;
-  text-align: center;
-}
-.qr-block img {
-  transition: transform 0.25s ease;
-}
-.qr-block img:hover {
-  transform: scale(1.05);
-}
+    /* TERMS */
+    .terms-section {
+      padding: 90px 20px;
+      background: #f9f9f9;
+    }
+    .terms-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: 700;
+    }
 
-    
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: white;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    footer p { color: #555; margin-bottom: 10px; }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="container">
     <nav>
-      <div class="logo">Visionary</div>
-      <ul class="nav-links">
+      <div class="logo">V.I.S.I.O.N</div>
+      <ul>
         <li><a href="#apps">Apps</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#terms">T&C</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -164,108 +207,77 @@
 </header>
 
 <section class="hero">
-  <div class="container">
-    <h1>Building Sleek iOS Apps</h1>
-    <p>Clean execution, smart design, and powerful tools for everyday life 🚀 — built to be affordable, never overpriced.</p>
-  </div>
+  <h1>Premium iOS Apps — Built With Purpose</h1>
+  <p>Clean design. Real utility. No ads. No clutter. Just powerful tools for everyday life.</p>
+  <div class="divider"></div>
 </section>
 
-<section class="apps-section" id="apps">
-  <div class="container">
-    <h2 class="section-title">My iOS Apps</h2>
-    <div class="apps-grid">
+<section class="container" id="apps" style="padding: 80px 0;">
+  <h2 class="section-title">Featured Apps</h2>
 
-      <!-- GCSE Scholar -->
-      <div class="app-card">
-        <div class="app-icon">🧠</div>
-        <h3 class="app-title">GCSE Scholar</h3>
-        <p class="app-description">
-          GCSE Scholar is an iOS app for GCSE students, offering quizzes and flashcards in subjects like Math, Sciences, Languages, and more. With customizable settings, progress tracking, and a user-friendly interface, it’s perfect for exam prep.
-        </p>
-        <a href="#" class="app-store-button">Download on App Store</a>
-        <a href="#terms" class="tc-link">Terms &amp; Conditions</a>
+  <div class="apps-grid">
+
+    <!-- Smart-Pocket -->
+    <div class="app-card">
+      <div class="app-top">
+        <div class="icon-box">🛠️</div>
+        <div>
+          <h3>Smart-Pocket</h3>
+          <span style="font-size:14px; color:#007aff; font-weight:600;">Most Popular</span>
+        </div>
       </div>
 
-<!-- Smart-Pocket -->
-<div class="app-card">
-  <div class="app-icon">🛠️</div>
-  <h3 class="app-title">Smart-Pocket</h3>
-  <p class="app-description">
-    Smart-Pocket is your all-in-one pocket utility app. From productivity tools like notes, to-dos, and password generators,
-    to everyday essentials like calculators, converters, weather, flashcards, and finance trackers — it simplifies daily life
-    in one sleek, easy-to-use package.
-  </p>
+      <p>Smart-Pocket is your all-in-one iOS utility suite — calculators, converters, notes, todos, password generation, OCR text scanning, QR tools, finance tools, weather, and more. Clean. Fast. Reliable.</p>
 
-  <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
-    Download on App Store
-  </a>
-  <a href="#terms" class="tc-link">Terms &amp; Conditions</a>
+      <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
+        📱 Download on the App Store
+      </a>
 
-  <!-- ⭐ NEW QR CODE BLOCK ⭐ -->
-  <div class="qr-block">
-    <p style="margin-top:25px; font-size:15px; color:#1d1d1f;"><strong>Scan to download</strong></p>
-    <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"
-         style="width:140px; height:auto; margin-top:10px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.15);" />
-  </div>
-</div>
-
-
-      <!-- Coming Soon placeholders -->
-      <div class="app-card">
-        <div class="app-icon">❓</div>
-        <h3 class="app-title">Coming Soon</h3>
-        <p class="app-description">Stay tuned for our next release.</p>
-        <span class="app-store-button disabled">Coming Soon</span>
+      <div class="qr-block">
+        <p><strong>Scan to download</strong></p>
+        <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"/>
       </div>
-
-      <div class="app-card">
-        <div class="app-icon">❓</div>
-        <h3 class="app-title">Coming Soon</h3>
-        <p class="app-description">Stay tuned for our next release.</p>
-        <span class="app-store-button disabled">Coming Soon</span>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">❓</div>
-        <h3 class="app-title">Coming Soon</h3>
-        <p class="app-description">Stay tuned for our next release.</p>
-        <span class="app-store-button disabled">Coming Soon</span>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">❓</div>
-        <h3 class="app-title">Coming Soon</h3>
-        <p class="app-description">Stay tuned for our next release.</p>
-        <span class="app-store-button disabled">Coming Soon</span>
-      </div>
-
     </div>
-  </div>
-</section>
 
-<section class="about-section" id="about">
-  <div class="container">
-    <h2 class="section-title">The Vision</h2>
-    <div class="about-content">
-      <p>
-        At Visionary AI Labs, we design and build sleek iOS apps that combine clean execution, smart design, and real results.
-      </p>
-      <p>
-        Our focus is simple: create powerful digital tools that remain accessible and affordable to everyone.
-      </p>
-      <p>
-        We believe in building the future one idea at a time 🚀.
-      </p>
+    <!-- GCSE Scholar -->
+    <div class="app-card">
+      <div class="app-top">
+        <div class="icon-box">🧠</div>
+        <div><h3>GCSE Scholar</h3></div>
+      </div>
+
+      <p>A clean exam-prep app for GCSE students — quizzes, flashcards, revision tools across Sciences, Math, English and more. Built for speed, clarity and effective learning.</p>
+
+      <a href="#" class="app-store-button">📱 Download on App Store</a>
     </div>
+
+    <!-- Placeholder -->
+    <div class="app-card">
+      <div class="app-top">
+        <div class="icon-box">❓</div>
+        <div><h3>Coming Soon</h3></div>
+      </div>
+      <p>More apps launching in 2025. Stay tuned for new utilities, lifestyle tools, and educational apps.</p>
+      <span class="app-store-button" style="background:#999; cursor:not-allowed;">Coming Soon</span>
+    </div>
+
   </div>
 </section>
 
+<section class="vision-section" id="vision">
+  <div class="vision-content">
+    <h2>The Vision</h2>
+    <p>I build iOS apps that focus on simplicity, clarity, and everyday usefulness. Every tool has a purpose — nothing added for the sake of it.</p>
+    <p>No subscriptions. No ads. No hidden nonsense. Just clean execution, honest pricing, and continuous improvement.</p>
+    <p>Currently developing: Smart-Pocket (expanding toolset), GCSE Scholar (major refresh), Umrah Companion (2025), and new micro-apps designed to make daily life easier.</p>
+  </div>
+</section>
 
-
-<!-- Terms & Conditions -->
+<!-- Terms -->
 <section class="terms-section" id="terms">
   <div class="container">
     <h2>Terms &amp; Conditions</h2>
+
     <p><strong>Apps developed by VisionaryAI Labs respect your privacy. This policy explains how the apps handle your data.</strong></p>
 
     <p><strong>1. Data Collection</strong><br>
@@ -291,42 +303,10 @@
 </section>
 
 <footer id="contact">
-  <div class="container">
-    <p>&copy; 2025 Visionary AI Labs Apps. All rights reserved.</p>
-    <div class="contact-info">
-      <h3>Support</h3>
-      <p>Have questions about our apps? Contact us!</p>
-      <p>Phone: +44 7595 003 096</p>
-      <p>Email: visionaryailabs1@gmail.com</p>
-    </div>
-    <p style="margin-top:10px; font-size:14px; color:#6e6e73;">
-      Our promise: powerful apps, fair prices.
-    </p>
-  </div>
+  <p>© 2025 V.I.S.I.O.N — iOS Apps Built With Purpose</p>
+  <p>For enquiries, you can WhatsApp me on <strong>+44 7595 003 096</strong> — please include the nature of your message so I can respond properly.</p>
+  <p>Email: visionaryailabs1@gmail.com</p>
 </footer>
-
-<script>
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }
-    });
-  });
-
-  // Add scroll effect to header
-  window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-      header.style.background = 'rgba(255, 255, 255, 0.95)';
-    } else {
-      header.style.background = 'rgba(255, 255, 255, 0.8)';
-    }
-  });
-</script>
 
 </body>
 </html>
