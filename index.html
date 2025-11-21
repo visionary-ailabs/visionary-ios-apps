@@ -134,7 +134,18 @@
       margin-bottom: 15px; /* was 30px, now tighter */
     }
 
+.qr-block {
+  margin-top: 20px;
+  text-align: center;
+}
+.qr-block img {
+  transition: transform 0.25s ease;
+}
+.qr-block img:hover {
+  transform: scale(1.05);
+}
 
+    
   </style>
 </head>
 <body>
@@ -175,18 +186,29 @@
         <a href="#terms" class="tc-link">Terms &amp; Conditions</a>
       </div>
 
-      <!-- Smart-Pocket -->
-      <div class="app-card">
-        <div class="app-icon">🛠️</div>
-        <h3 class="app-title">Smart-Pocket</h3>
-        <p class="app-description">
-          Smart-Pocket is your all-in-one pocket utility app. From productivity tools like notes, to-dos, and password generators,
-          to everyday essentials like calculators, converters, weather, flashcards, and finance trackers — it simplifies daily life
-          in one sleek, easy-to-use package.
-        </p>
-        <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">Download on App Store</a>
-        <a href="#terms" class="tc-link">Terms &amp; Conditions</a>
-      </div>
+<!-- Smart-Pocket -->
+<div class="app-card">
+  <div class="app-icon">🛠️</div>
+  <h3 class="app-title">Smart-Pocket</h3>
+  <p class="app-description">
+    Smart-Pocket is your all-in-one pocket utility app. From productivity tools like notes, to-dos, and password generators,
+    to everyday essentials like calculators, converters, weather, flashcards, and finance trackers — it simplifies daily life
+    in one sleek, easy-to-use package.
+  </p>
+
+  <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
+    Download on App Store
+  </a>
+  <a href="#terms" class="tc-link">Terms &amp; Conditions</a>
+
+  <!-- ⭐ NEW QR CODE BLOCK ⭐ -->
+  <div class="qr-block">
+    <p style="margin-top:25px; font-size:15px; color:#1d1d1f;"><strong>Scan to download</strong></p>
+    <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"
+         style="width:140px; height:auto; margin-top:10px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.15);" />
+  </div>
+</div>
+
 
       <!-- Coming Soon placeholders -->
       <div class="app-card">
