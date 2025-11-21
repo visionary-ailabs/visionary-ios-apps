@@ -17,7 +17,6 @@
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="preview.png"/>
 
-  <!-- Styles -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -25,6 +24,7 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f5f6f7;
       color: #111;
+      line-height: 1.6;
     }
 
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -72,7 +72,20 @@
       margin: 35px auto 0; border-radius: 4px;
     }
 
-    /* APPS */
+    /* FEATURED APPS LAYOUT */
+    .apps-columns {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 40px;
+    }
+
+    .apps-left { display: flex; flex-direction: column; }
+    .apps-right {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
     .section-title {
       text-align: center;
       font-size: 38px;
@@ -80,12 +93,7 @@
       margin-bottom: 60px;
     }
 
-    .apps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 40px;
-    }
-
+    /* APP CARDS */
     .app-card {
       background: white;
       padding: 35px;
@@ -118,7 +126,7 @@
       margin-bottom: 8px;
     }
     .app-card p {
-      color: #555; font-size: 16px; line-height: 1.6; margin: 20px 0;
+      color: #555; font-size: 16px; margin: 20px 0;
     }
 
     /* APP STORE BUTTON */
@@ -146,13 +154,17 @@
     }
     .qr-block img:hover { transform: scale(1.05); }
 
-    /* NEW TOOLS GRID */
+    /* NEW TOOLS BLOCK */
     .new-tools {
       background: #f2f5ff;
       border: 1px solid #dce6ff;
       padding: 18px 20px;
       border-radius: 16px;
       margin-top: 20px;
+    }
+    .coming-tools {
+      background: #fff7f0;
+      border: 1px solid #ffd4a8;
     }
     .new-tools-title {
       font-size: 15px;
@@ -168,7 +180,7 @@
       color: #333;
     }
 
-    /* VISION SECTION */
+    /* VISION */
     .vision-section {
       padding: 100px 20px;
       background: white;
@@ -219,6 +231,13 @@
       border-top: 1px solid rgba(0,0,0,0.08);
     }
     footer p { color: #555; margin-bottom: 10px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .apps-columns { grid-template-columns: 1fr; }
+      .apps-right { flex-direction: column; }
+    }
+
   </style>
 </head>
 
@@ -244,77 +263,121 @@
   <div class="divider"></div>
 </section>
 
+
+<!-- ============================================================= -->
+<!-- FEATURED APPS (FULLY UPDATED AS REQUESTED) -->
+<!-- ============================================================= -->
+
 <section class="container" id="apps" style="padding: 80px 0;">
   <h2 class="section-title">Featured Apps</h2>
 
-  <div class="apps-grid">
+  <div class="apps-columns">
 
-    <!-- Smart-Pocket -->
-    <div class="app-card">
-      <div class="app-top">
-        <div class="icon-box">🛠️</div>
-        <div>
-          <h3>Smart-Pocket</h3>
-          <span style="font-size:14px; color:#007aff; font-weight:600;">Most Popular</span>
+    <!-- LEFT COLUMN — SMART POCKET -->
+    <div class="apps-left">
+
+      <div class="app-card large-card">
+        <div class="app-top">
+          <div class="icon-box">🛠️</div>
+          <div>
+            <h3>Smart-Pocket</h3>
+            <span style="font-size:14px; color:#007aff; font-weight:600;">Most Popular</span>
+          </div>
         </div>
-      </div>
 
-      <p>Smart-Pocket is your all-in-one iOS utility suite — calculators, converters, notes, todos, password generation, OCR text scanning, QR tools, finance tools, weather, and more. Clean. Fast. Reliable.</p>
+        <p>
+          Smart-Pocket is your all-in-one iOS utility suite — calculators, converters, notes, todos, password generation,
+          OCR text scanning, QR tools, finance tools, weather, and more. Clean. Fast. Reliable.
+        </p>
 
-      <!-- NEW TOOL LIST -->
-      <div class="new-tools">
-        <div class="new-tools-title">🔥 New in v1.8</div>
-        <div class="new-tools-list">
-          <div>🍅 Pomodoro Timer</div>
-          <div>🔗 URL Saver</div>
-          <div>🍽 Restaurants</div>
-          <div>🧾 Image → Text (OCR)</div>
-          <div>🏦 Mortgage Overpayment</div>
-          <div>🎥 Movie Watchlist</div>
-          <div>🧩 Image → SVG</div>
+        <!-- 🔵 WHAT'S NEW IN 1.8 -->
+        <div class="new-tools">
+          <div class="new-tools-title">🔵 What's New in v1.8<br>
+            <span style="font-size:13px; font-weight:500; color:#666;">Released 20 Nov 2025</span>
+          </div>
+
+          <div class="new-tools-list">
+            <div>🍅 Pomodoro Timer</div>
+            <div>🔗 URL Saver</div>
+            <div>🍽 Restaurants</div>
+            <div>🧾 Image → Text (OCR)</div>
+            <div>🏦 Mortgage Overpayment</div>
+            <div>🎥 Movie Watchlist</div>
+            <div>🧩 Image → SVG</div>
+          </div>
         </div>
-      </div>
 
-      <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
-        📱 Download on the App Store
-      </a>
+        <!-- 🔥 WHAT'S COMING IN 1.9 -->
+        <div class="new-tools coming-tools">
+          <div class="new-tools-title" style="color:#d46b00;">
+            🔥 Coming in v1.9<br>
+            <span style="font-size:13px; font-weight:500; color:#a45b00;">Releasing 20 Dec 2025</span>
+          </div>
 
-      <div class="qr-block">
-        <p><strong>Scan to download</strong></p>
-        <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"/>
+          <div class="new-tools-list">
+            <div>🧠 KnowledgeBase</div>
+            <div>🧭 Altimeter</div>
+            <div>🌐 Deep WHOIS Lookup</div>
+            <div>🔶 Hexagon Memory Match</div>
+          </div>
+        </div>
+
+        <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
+          📱 Download on the App Store
+        </a>
+
+        <div class="qr-block">
+          <p><strong>Scan to download</strong></p>
+          <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"/>
+        </div>
+
       </div>
     </div>
 
-    <!-- GCSE Scholar -->
-    <div class="app-card">
-      <div class="app-top">
-        <div class="icon-box">🧠</div>
-        <div><h3>GCSE Scholar</h3></div>
+
+    <!-- RIGHT COLUMN — SCHOLAR + COMING SOON -->
+    <div class="apps-right">
+
+      <!-- GCSE SCHOLAR -->
+      <div class="app-card right-card">
+        <div class="app-top">
+          <div class="icon-box">🧠</div>
+          <div><h3>GCSE Scholar</h3></div>
+        </div>
+
+        <p>A clean exam-prep app for GCSE students — quizzes, flashcards, revision tools across Sciences, Math, English and more.</p>
+
+        <a href="#" class="app-store-button">📱 Download on App Store</a>
       </div>
 
-      <p>A clean exam-prep app for GCSE students — quizzes, flashcards, revision tools across Sciences, Math, English and more. Built for speed, clarity and effective learning.</p>
+      <!-- COMING SOON -->
+      <div class="app-card right-card">
+        <div class="app-top">
+          <div class="icon-box">❓</div>
+          <div><h3>Coming Soon</h3></div>
+        </div>
 
-      <a href="#" class="app-store-button">📱 Download on App Store</a>
-    </div>
+        <p>New apps and utilities launching throughout 2025. Stay tuned for more intelligent, useful everyday tools.</p>
 
-    <!-- Placeholder -->
-    <div class="app-card">
-      <div class="app-top">
-        <div class="icon-box">❓</div>
-        <div><h3>Coming Soon</h3></div>
+        <span class="app-store-button" style="background:#999; cursor:not-allowed;">Coming Soon</span>
       </div>
-      <p>More apps launching in 2025. Stay tuned for new utilities, lifestyle tools, and educational apps.</p>
-      <span class="app-store-button" style="background:#999; cursor:not-allowed;">Coming Soon</span>
+
     </div>
 
   </div>
 </section>
 
+
+<!-- ============================================================= -->
+<!-- VISION -->
+<!-- ============================================================= -->
+
 <section class="vision-section" id="vision">
   <div class="vision-content">
     <h2>The Vision</h2>
 
-    <p>I build iOS apps focused on clarity, simplicity and real everyday usefulness. Every feature has intention — nothing added for padding or gimmicks. Clean execution, honest pricing, and a focus on quality define all development decisions.</p>
+    <p>I build iOS apps focused on clarity, simplicity and real everyday usefulness. Every feature has intention — nothing added for padding or gimmicks.
+       Clean execution, honest pricing, and a focus on quality define all development decisions.</p>
 
     <p>My principles are simple:</p>
     <ul>
@@ -329,7 +392,12 @@
   </div>
 </section>
 
-<!-- Terms -->
+
+
+<!-- ============================================================= -->
+<!-- TERMS & CONDITIONS -->
+<!-- ============================================================= -->
+
 <section class="terms-section" id="terms">
   <div class="container">
     <h2>Terms &amp; Conditions</h2>
@@ -358,6 +426,11 @@
   </div>
 </section>
 
+
+<!-- ============================================================= -->
+<!-- FOOTER -->
+<!-- ============================================================= -->
+
 <footer id="contact">
   <p>© 2025 V.I.S.I.O.N — iOS Apps Built With Purpose</p>
   <p>For enquiries, you can WhatsApp me on <strong>+44 7595 003 096</strong> — please include the nature of your message</p>
@@ -366,4 +439,3 @@
 
 </body>
 </html>
-
