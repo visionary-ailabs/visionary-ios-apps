@@ -72,20 +72,6 @@
       margin: 35px auto 0; border-radius: 4px;
     }
 
-    /* FEATURED APPS LAYOUT */
-    .apps-columns {
-      display: grid;
-      grid-template-columns: 1fr 0.8fr;
-      gap: 40px;
-    }
-
-    .apps-left { display: flex; flex-direction: column; }
-    .apps-right {
-      display: flex;
-      flex-direction: column;
-      gap: 35px;
-    }
-
     .section-title {
       text-align: center;
       font-size: 38px;
@@ -101,6 +87,7 @@
       border: 1px solid rgba(0,0,0,0.07);
       box-shadow: 0 15px 30px rgba(0,0,0,0.06);
       transition: 0.3s ease;
+      width: 100%;
     }
     .app-card:hover {
       transform: translateY(-8px);
@@ -112,6 +99,7 @@
       gap: 25px;
       align-items: center;
     }
+
     .icon-box {
       width: 90px; height: 90px;
       border-radius: 22px;
@@ -119,11 +107,13 @@
       display: flex; justify-content: center; align-items: center;
       font-size: 46px; color: white;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      flex: 0 0 auto;
     }
+
     .app-card h3 {
       font-size: 24px;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .app-card p {
       color: #555; font-size: 16px; margin: 20px 0;
@@ -180,6 +170,27 @@
       color: #333;
     }
 
+    /* ✅ ADVANCED GRID (SYMMETRICAL) */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 40px;
+      align-items: start;
+      grid-template-areas:
+        "smart umrah"
+        "smart aura"
+        "smart soon";
+    }
+    .grid-smart { grid-area: smart; }
+    .grid-umrah { grid-area: umrah; }
+    .grid-aura  { grid-area: aura; }
+    .grid-soon  { grid-area: soon; }
+
+    /* Keep the left hero card visually prominent */
+    .grid-smart.app-card {
+      padding: 40px;
+    }
+
     /* VISION */
     .vision-section {
       padding: 100px 20px;
@@ -234,8 +245,15 @@
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-      .apps-columns { grid-template-columns: 1fr; }
-      .apps-right { flex-direction: column; }
+      .apps-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "smart"
+          "umrah"
+          "aura"
+          "soon";
+      }
+      .grid-smart.app-card { padding: 35px; }
     }
   </style>
 </head>
@@ -269,154 +287,146 @@
 <section class="container" id="apps" style="padding: 80px 0;">
   <h2 class="section-title">Featured Apps</h2>
 
-  <div class="apps-columns">
+  <div class="apps-grid">
 
-    <!-- LEFT COLUMN — SMART POCKET -->
-    <div class="apps-left">
-      <div class="app-card large-card">
-        <div class="app-top">
-          <div class="icon-box">🛠️</div>
-          <div>
-            <h3>Smart-Pocket</h3>
-            <span style="font-size:14px; color:#007aff; font-weight:600;">Most Popular</span>
-          </div>
+    <!-- SMART-POCKET (LEFT HERO) -->
+    <div class="app-card grid-smart">
+      <div class="app-top">
+        <div class="icon-box">🛠️</div>
+        <div>
+          <h3>Smart-Pocket</h3>
+          <span style="font-size:14px; color:#007aff; font-weight:600;">Most Popular</span>
+        </div>
+      </div>
+
+      <p>
+        Smart-Pocket is your all-in-one iOS utility suite — calculators, converters, notes, todos, password generation,
+        OCR text scanning, QR tools, finance tools, weather, and more. Clean. Fast. Reliable.
+      </p>
+
+      <div class="new-tools">
+        <div class="new-tools-title">🔵 What's New in v1.8<br>
+          <span style="font-size:13px; font-weight:500; color:#666;">Released 20 Nov 2025</span>
         </div>
 
-        <p>
-          Smart-Pocket is your all-in-one iOS utility suite — calculators, converters, notes, todos, password generation,
-          OCR text scanning, QR tools, finance tools, weather, and more. Clean. Fast. Reliable.
-        </p>
+        <div class="new-tools-list">
+          <div>🍅 Pomodoro Timer</div>
+          <div>🔗 URL Saver</div>
+          <div>🍽 Restaurants</div>
+          <div>🧾 Image → Text (OCR)</div>
+          <div>🏦 Mortgage Overpayment</div>
+          <div>🎥 Movie Watchlist</div>
+          <div>🧩 Image → SVG</div>
+        </div>
+      </div>
 
-        <!-- 🔵 WHAT'S NEW IN 1.8 -->
-        <div class="new-tools">
-          <div class="new-tools-title">🔵 What's New in v1.8<br>
-            <span style="font-size:13px; font-weight:500; color:#666;">Released 20 Nov 2025</span>
-          </div>
-
-          <div class="new-tools-list">
-            <div>🍅 Pomodoro Timer</div>
-            <div>🔗 URL Saver</div>
-            <div>🍽 Restaurants</div>
-            <div>🧾 Image → Text (OCR)</div>
-            <div>🏦 Mortgage Overpayment</div>
-            <div>🎥 Movie Watchlist</div>
-            <div>🧩 Image → SVG</div>
-          </div>
+      <div class="new-tools coming-tools">
+        <div class="new-tools-title" style="color:#d46b00;">
+          🔥 Coming in v1.9<br>
+          <span style="font-size:13px; font-weight:500; color:#a45b00;">Releasing 20 Dec 2025</span>
         </div>
 
-        <!-- 🔥 WHAT'S COMING IN 1.9 -->
-        <div class="new-tools coming-tools">
-          <div class="new-tools-title" style="color:#d46b00;">
-            🔥 Coming in v1.9<br>
-            <span style="font-size:13px; font-weight:500; color:#a45b00;">Releasing 20 Dec 2025</span>
-          </div>
-
-          <div class="new-tools-list">
-            <div>🧠 KnowledgeBase</div>
-            <div>🧭 Altimeter</div>
-            <div>🌐 Deep WHOIS Lookup</div>
-            <div>🔶 Hexagon Memory Match</div>
-          </div>
+        <div class="new-tools-list">
+          <div>🧠 KnowledgeBase</div>
+          <div>🧭 Altimeter</div>
+          <div>🌐 Deep WHOIS Lookup</div>
+          <div>🔶 Hexagon Memory Match</div>
         </div>
+      </div>
 
-        <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
-          📱 Download on the App Store
-        </a>
+      <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
+        📱 Download on the App Store
+      </a>
 
-        <div class="qr-block">
-          <p><strong>Scan to download</strong></p>
-          <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"/>
-        </div>
+      <div class="qr-block">
+        <p><strong>Scan to download</strong></p>
+        <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"/>
       </div>
     </div>
 
-    <!-- RIGHT COLUMN — UMRAH + AURA + COMING SOON -->
-    <div class="apps-right">
+    <!-- UMRAH (RIGHT TOP) -->
+    <div class="app-card grid-umrah">
+      <div class="app-top">
+        <div class="icon-box" style="background:#c9a043;">🕋</div>
+        <div><h3>Umrah Companion</h3></div>
+      </div>
 
-      <!-- UMRAH COMPANION -->
-      <div class="app-card right-card">
-        <div class="app-top">
-          <div class="icon-box" style="background:#c9a043;">🕋</div>
-          <div><h3>Umrah Companion</h3></div>
-        </div>
+      <p>
+        Your serene, offline-first guide for the sacred pilgrimage — step-by-step Umrah walkthrough,
+        beautiful Arabic duas, translations, maps for Makkah & Madinah, and full audio support with
+        personal iCloud recordings and premium reciter packs via On-Demand Resources.
+      </p>
 
-        <p>
-          Your serene, offline-first guide for the sacred pilgrimage — step-by-step Umrah walkthrough,
-          beautiful Arabic duas, translations, maps for Makkah & Madinah, and full audio support with
-          personal iCloud recordings and premium reciter packs via On-Demand Resources.
-        </p>
-
-        <div class="new-tools">
-          <div class="new-tools-title">✨ Core Features</div>
-          <div class="new-tools-list">
-            <div>🕋 Full Umrah Guide</div>
-            <div>📖 Duas (Arabic + Transliteration)</div>
-            <div>🎧 Recitations (ODR Packs)</div>
-            <div>🎙 Personal Recordings</div>
-            <div>🗺 Offline Maps</div>
-            <div>🔁 Loop Playback</div>
-          </div>
-        </div>
-
-        <a href="https://apps.apple.com/gb/app/umrah-companion/id6736787737" class="app-store-button">
-          📱 Download on the App Store
-        </a>
-
-        <div class="qr-block">
-          <p><strong>Scan to download</strong></p>
-          <img src="umrah_qr.jpg" alt="Umrah Companion QR Code"/>
+      <div class="new-tools">
+        <div class="new-tools-title">✨ Core Features</div>
+        <div class="new-tools-list">
+          <div>🕋 Full Umrah Guide</div>
+          <div>📖 Duas (Arabic + Transliteration)</div>
+          <div>🎧 Recitations (ODR Packs)</div>
+          <div>🎙 Personal Recordings</div>
+          <div>🗺 Offline Maps</div>
+          <div>🔁 Loop Playback</div>
         </div>
       </div>
 
-      <!-- AURA (COMING SOON APP) -->
-      <div class="app-card right-card">
-        <div class="app-top">
-          <div class="icon-box" style="background:#111;">🌌</div>
-          <div>
-            <h3>Aura: Visual Sleep & Focus</h3>
-            <span style="font-size:14px; color:#7b7bff; font-weight:600;">Coming Jan 2026</span>
-          </div>
-        </div>
+      <a href="https://apps.apple.com/gb/app/umrah-companion/id6736787737" class="app-store-button">
+        📱 Download on the App Store
+      </a>
 
-        <p>
-          Drift away in seconds. <strong>Aura</strong> reimagines the sleep app experience by combining 3D spatial audio
-          with mesmerizing, hypnotic visual particles. Designed to calm the restless mind, it features exclusive ASMR
-          from world-class creators, cinematic soundscapes, and a dark "glass" aesthetic built for the night.
-        </p>
-
-        <div class="new-tools">
-          <div class="new-tools-title">🌙 Core Features</div>
-          <div class="new-tools-list">
-            <div>🎧 3D Spatial Audio</div>
-            <div>✨ Visual Hypnosis</div>
-            <div>🎙 Exclusive Content</div>
-            <div>📥 Offline Sanctuary</div>
-            <div>☁️ Cross-Device Sync</div>
-            <div>🔒 Background Play</div>
-          </div>
-        </div>
-
-
-        <p style="font-size:14px; color:#666; margin-top:18px;">
-          <strong>Highlight:</strong> Smart caching guarantees zero-latency, offline-ready playback while minimizing data usage.
-        </p>
-
-        <span class="app-store-button" style="background:#999; cursor:not-allowed;">⏳ Coming Soon</span>
+      <div class="qr-block">
+        <p><strong>Scan to download</strong></p>
+        <img src="umrah_qr.jpg" alt="Umrah Companion QR Code"/>
       </div>
-
-      <!-- GENERIC COMING SOON (NEXT APPLICATION PLACEHOLDER) -->
-      <div class="app-card right-card">
-        <div class="app-top">
-          <div class="icon-box">❓</div>
-          <div><h3>Coming Soon</h3></div>
-        </div>
-
-        <p>New apps launching throughout 2025 — focused, purposeful, and designed with meaningful use-cases in mind.</p>
-
-        <span class="app-store-button" style="background:#999; cursor:not-allowed;">Coming Soon</span>
-      </div>
-
     </div>
+
+    <!-- AURA (RIGHT MIDDLE) -->
+    <div class="app-card grid-aura">
+      <div class="app-top">
+        <div class="icon-box" style="background:#111;">🌌</div>
+        <div>
+          <h3>Aura: Visual Sleep & Focus</h3>
+          <span style="font-size:14px; color:#7b7bff; font-weight:600;">Coming Jan 2026</span>
+        </div>
+      </div>
+
+      <p>
+        Drift away in seconds. <strong>Aura</strong> reimagines the sleep app experience by combining 3D spatial audio
+        with mesmerizing, hypnotic visual particles. Designed to calm the restless mind, it features exclusive ASMR
+        from world-class creators, cinematic soundscapes, and a dark "glass" aesthetic built for the night.
+      </p>
+
+      <div class="new-tools">
+        <div class="new-tools-title">🌙 Core Features</div>
+        <div class="new-tools-list">
+          <div>🎧 3D Spatial Audio</div>
+          <div>✨ Visual Hypnosis</div>
+          <div>🎙 Exclusive Content</div>
+          <div>📥 Offline Sanctuary</div>
+          <div>☁️ Cross-Device Sync</div>
+          <div>🔒 Background Play</div>
+        </div>
+      </div>
+
+
+      <p style="font-size:14px; color:#666; margin-top:18px;">
+        <strong>Highlight:</strong> Smart caching guarantees zero-latency, offline-ready playback while minimizing data usage.
+      </p>
+
+      <span class="app-store-button" style="background:#999; cursor:not-allowed;">⏳ Coming Soon</span>
+    </div>
+
+    <!-- COMING SOON PLACEHOLDER (RIGHT BOTTOM) -->
+    <div class="app-card grid-soon">
+      <div class="app-top">
+        <div class="icon-box">❓</div>
+        <div><h3>Coming Soon</h3></div>
+      </div>
+
+      <p>New apps launching throughout 2025 — focused, purposeful, and designed with meaningful use-cases in mind.</p>
+
+      <span class="app-store-button" style="background:#999; cursor:not-allowed;">Coming Soon</span>
+    </div>
+
   </div>
 </section>
 
@@ -434,7 +444,8 @@
     <p>My principles are simple:</p>
     <ul>
       <li>No ads — ever.</li>
-      <li>No subscriptions — one-time purchase only.</li>
+      <li>Simple, honest pricing — no pressure, no tricks, just value.
+</li>
       <li>Useful tools over flashy clutter.</li>
       <li>Fast updates and continuous refinement.</li>
       <li>Design decisions that respect the user’s time.</li>
