@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,7 +139,10 @@
     /* QR BLOCK */
     .qr-block { text-align: center; margin-top: 25px; }
     .qr-block img {
-      width: 150px; border-radius: 12px;
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 12px;
       box-shadow: 0 12px 30px rgba(0,0,0,0.14);
       transition: 0.25s ease;
     }
@@ -170,7 +174,7 @@
       color: #333;
     }
 
-    /* ✅ ADVANCED GRID (SYMMETRICAL) */
+    /* ✅ ADVANCED GRID — SYMMETRICAL & INTENTIONAL */
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -179,17 +183,15 @@
       grid-template-areas:
         "smart umrah"
         "smart aura"
-        "smart soon";
+        "soon  aura";
     }
     .grid-smart { grid-area: smart; }
     .grid-umrah { grid-area: umrah; }
     .grid-aura  { grid-area: aura; }
     .grid-soon  { grid-area: soon; }
 
-    /* Keep the left hero card visually prominent */
-    .grid-smart.app-card {
-      padding: 40px;
-    }
+    /* Keep left hero card a bit more premium */
+    .grid-smart.app-card { padding: 40px; }
 
     /* VISION */
     .vision-section {
@@ -197,10 +199,7 @@
       background: white;
       border-top: 1px solid rgba(0,0,0,0.05);
     }
-    .vision-content {
-      max-width: 850px;
-      margin: 0 auto;
-    }
+    .vision-content { max-width: 850px; margin: 0 auto; }
     .vision-content h2 {
       text-align: center;
       font-size: 38px;
@@ -340,7 +339,7 @@
 
       <div class="qr-block">
         <p><strong>Scan to download</strong></p>
-        <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code"/>
+        <img src="smartpocket_qr.jpg" alt="Smart-Pocket QR Code" width="150" height="150"/>
       </div>
     </div>
 
@@ -375,11 +374,11 @@
 
       <div class="qr-block">
         <p><strong>Scan to download</strong></p>
-        <img src="umrah_qr.png" alt="Umrah Companion QR Code"/>
+        <img src="umrah_qr.png" alt="Umrah Companion QR Code" width="150" height="150"/>
       </div>
     </div>
 
-    <!-- AURA (RIGHT MIDDLE) -->
+    <!-- AURA (RIGHT, ANCHOR CARD) -->
     <div class="app-card grid-aura">
       <div class="app-top">
         <div class="icon-box" style="background:#111;">🌌</div>
@@ -407,6 +406,17 @@
         </div>
       </div>
 
+      <div class="new-tools coming-tools" style="margin-top:14px;">
+        <div class="new-tools-title" style="color:#6b4eff;">🧠 Key Tech</div>
+        <div class="new-tools-list">
+          <div>⚙️ SwiftUI</div>
+          <div>🎧 AVFoundation</div>
+          <div>🧲 Metal (Particles)</div>
+          <div>💳 RevenueCat</div>
+          <div>☁️ Cloud Sync</div>
+          <div>🚀 Smart Caching</div>
+        </div>
+      </div>
 
       <p style="font-size:14px; color:#666; margin-top:18px;">
         <strong>Highlight:</strong> Smart caching guarantees zero-latency, offline-ready playback while minimizing data usage.
@@ -415,14 +425,14 @@
       <span class="app-store-button" style="background:#999; cursor:not-allowed;">⏳ Coming Soon</span>
     </div>
 
-    <!-- COMING SOON PLACEHOLDER (RIGHT BOTTOM) -->
+    <!-- COMING SOON PLACEHOLDER (UNDER SMART-POCKET) -->
     <div class="app-card grid-soon">
       <div class="app-top">
         <div class="icon-box">❓</div>
         <div><h3>Coming Soon</h3></div>
       </div>
 
-      <p>New apps launching throughout 2025 — focused, purposeful, and designed with meaningful use-cases in mind.</p>
+      <p>New apps launching throughout 2026 — focused, purposeful, and designed with meaningful use-cases in mind.</p>
 
       <span class="app-store-button" style="background:#999; cursor:not-allowed;">Coming Soon</span>
     </div>
@@ -438,20 +448,19 @@
   <div class="vision-content">
     <h2>The Vision</h2>
 
-    <p>I build iOS apps focused on clarity, simplicity and real everyday usefulness. Every feature has intention — nothing added for padding or gimmicks.
+    <p>We build iOS apps focused on clarity, simplicity and real everyday usefulness. Every feature has intention — nothing added for padding or gimmicks.
        Clean execution, honest pricing, and a focus on quality define all development decisions.</p>
 
     <p>My principles are simple:</p>
     <ul>
-      <li>No ads — ever.</li>
-      <li>Simple, honest pricing — no pressure, no tricks, just value.
-</li>
-      <li>Useful tools over flashy clutter.</li>
-      <li>Fast updates and continuous refinement.</li>
-      <li>Design decisions that respect the user’s time.</li>
+      <li>No ads — ever</li>
+      <li>Simple, honest pricing — no pressure, no tricks, just value</li>
+      <li>Useful tools over flashy clutter</li>
+      <li>Fast updates and continuous refinement</li>
+      <li>Design decisions that respect the user’s time</li>
     </ul>
 
-    <p>Currently developing Smart-Pocket (expanding the toolset rapidly), a major refresh for GCSE Scholar, Umrah Companion (2025) and several upcoming micro-apps aimed at improving day-to-day life through minimalistic, intelligent design.</p>
+
   </div>
 </section>
 
@@ -499,3 +508,4 @@
 
 </body>
 </html>
+```
