@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,22 @@
   <title>iOS Apps by V.I.S.I.O.N</title>
 
   <!-- SEO -->
-  <meta name="description" content="Premium iOS apps built with precision, clean design, and real everyday utility — including Smart-Pocket, GCSE Scholar, and more."/>
-  <meta name="keywords" content="iOS apps, Smart-Pocket, GCSE Scholar, utilities, productivity, Visionary apps">
+  <meta name="description" content="Premium iOS apps by V.I.S.I.O.N — Smart-Pocket, Umrah Companion, Aura, and Flux Player. Clean design, real utility, honest pricing, and no ads."/>
+  <meta name="keywords" content="iOS apps, V.I.S.I.O.N, VisionaryAI Labs, Smart-Pocket, Umrah Companion, Aura, Flux Player, utilities, productivity, offline apps, iPhone apps">
   <meta name="author" content="V.I.S.I.O.N"/>
+  <meta name="robots" content="index, follow"/>
 
   <!-- Open Graph -->
   <meta property="og:title" content="iOS Apps by V.I.S.I.O.N"/>
-  <meta property="og:description" content="Explore premium iOS apps including Smart-Pocket and GCSE Scholar — clean, powerful, and built with purpose."/>
+  <meta property="og:description" content="Explore premium iOS apps — Smart-Pocket, Umrah Companion, Aura, and Flux Player — clean, powerful, and built with purpose."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="preview.png"/>
+
+  <!-- Optional: Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="iOS Apps by V.I.S.I.O.N"/>
+  <meta name="twitter:description" content="Premium iOS apps — Smart-Pocket, Umrah Companion, Aura, and Flux Player — built with purpose."/>
+  <meta name="twitter:image" content="preview.png"/>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -173,7 +181,7 @@
       color: #333;
     }
 
-    /* ✅ ADVANCED GRID — SYMMETRICAL & INTENTIONAL */
+    /* ✅ ADVANCED GRID — SYMMETRICAL & INTENTIONAL (UPDATED FOR FLUX) */
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -182,11 +190,13 @@
       grid-template-areas:
         "smart umrah"
         "smart aura"
+        "flux  aura"
         "soon  aura";
     }
     .grid-smart { grid-area: smart; }
     .grid-umrah { grid-area: umrah; }
     .grid-aura  { grid-area: aura; }
+    .grid-flux  { grid-area: flux; }
     .grid-soon  { grid-area: soon; }
 
     /* Keep left hero card a bit more premium */
@@ -249,6 +259,7 @@
           "smart"
           "umrah"
           "aura"
+          "flux"
           "soon";
       }
       .grid-smart.app-card { padding: 35px; }
@@ -393,8 +404,7 @@
 
       <p>
         Drift away in seconds. <strong>Aura</strong> reimagines the sleep app experience by combining 3D spatial audio
-        with mesmerizing, hypnotic visual particles. Designed to calm the restless mind, it features exclusive ASMR
-        from world-class creators, cinematic soundscapes, and a dark "glass" aesthetic built for the night.
+        with mesmerizing, hypnotic visual particles. Designed to calm the restless mind, it features exclusive <strong>ASMR</strong> from world-class creators, cinematic soundscapes, and a dark "glass" aesthetic built for the night.
       </p>
 
       <div class="new-tools">
@@ -431,6 +441,41 @@
         </span>
       </div>
     </div>
+
+   <!-- FLUX PLAYER (UPDATED CARD) -->
+<div class="app-card grid-flux">
+  <div class="app-top">
+    <div class="icon-box" style="background:#2b2b2b;">🎧</div>
+    <div>
+      <h3>Flux Player</h3>
+      <span style="font-size:14px; color:#7b7bff; font-weight:600;">Coming Jan 2026</span>
+    </div>
+  </div>
+
+  <p>
+    A no-nonsense audio + visual player — everything you need for smooth playback, queues, and library control,
+    with a clean interface and zero unnecessary extras.
+  </p>
+
+  <div class="new-tools">
+    <div class="new-tools-title">🎛 Core Features</div>
+    <div class="new-tools-list">
+      <div>🎧 Audio + Visual Playback</div>
+      <div>📥 Offline Support</div>
+      <div>📂 Local Library</div>
+      <div>📑 Playlists + Queue</div>
+      <div>🔁 Repeat + Shuffle</div>
+      <div>⚡ Fast & Lightweight</div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <span class="app-store-button" style="background:#999; cursor:not-allowed;">
+      Coming Soon
+    </span>
+  </div>
+</div>
+
 
     <!-- COMING SOON PLACEHOLDER (UNDER SMART-POCKET) -->
     <div class="app-card grid-soon">
@@ -517,3 +562,4 @@
 
 </body>
 </html>
+```
