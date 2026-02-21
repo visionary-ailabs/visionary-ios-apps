@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>iOS Apps by V.I.S.I.O.N</title>
+
   <!-- SEO -->
-  <meta name="description" content="Premium iOS apps by V.I.S.I.O.N — Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr. Clean design, real utility, honest pricing, no ads."/>
-  <meta name="keywords" content="iOS apps, V.I.S.I.O.N, VisionaryAI Labs, Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr, utilities, productivity, offline apps, iPhone apps">
+  <meta name="description" content="Premium iOS apps by V.I.S.I.O.N — Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr, Tasbih Beads. Clean design, real utility, honest pricing, no ads."/>
+  <meta name="keywords" content="iOS apps, V.I.S.I.O.N, VisionaryAI Labs, Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr, Tasbih, prayer beads, utilities, productivity, offline apps, iPhone apps"/>
   <meta name="author" content="V.I.S.I.O.N"/>
   <meta name="robots" content="index, follow"/>
+
   <!-- Open Graph -->
   <meta property="og:title" content="iOS Apps by V.I.S.I.O.N"/>
-  <meta property="og:description" content="Explore premium iOS apps — Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr — clean, powerful, built with purpose."/>
+  <meta property="og:description" content="Explore premium iOS apps — Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr, Tasbih Beads — clean, powerful, built with purpose."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="preview.png"/>
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="iOS Apps by V.I.S.I.O.N"/>
-  <meta name="twitter:description" content="Premium iOS apps — Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr — built with purpose."/>
+  <meta name="twitter:description" content="Premium iOS apps — Smart-Pocket, Umrah Companion, Aura, Flux Player, Deconstructr, Tasbih Beads — built with purpose."/>
   <meta name="twitter:image" content="preview.png"/>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f5f6f7;
@@ -28,25 +32,31 @@
       line-height: 1.6;
     }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    /* NAV */
+
     header {
       backdrop-filter: blur(22px);
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255,255,255,0.7);
       border-bottom: 1px solid rgba(0,0,0,0.08);
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav {
-      display: flex; justify-content: space-between; align-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 20px 0;
     }
     .logo { font-size: 28px; font-weight: 600; color: #111; }
     nav ul { list-style: none; display: flex; gap: 28px; }
     nav a {
-      text-decoration: none; color: #111; font-weight: 500;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
       transition: 0.25s ease;
     }
     nav a:hover { color: #007aff; }
-    /* HERO */
+
     .hero {
       text-align: center;
       padding: 100px 0 70px;
@@ -65,16 +75,20 @@
       color: #555;
     }
     .divider {
-      width: 100px; height: 4px; background: #007aff;
-      margin: 35px auto 0; border-radius: 4px;
+      width: 100px;
+      height: 4px;
+      background: #007aff;
+      margin: 35px auto 0;
+      border-radius: 4px;
     }
+
     .section-title {
       text-align: center;
       font-size: 38px;
       font-weight: 700;
       margin-bottom: 60px;
     }
-    /* APP CARDS */
+
     .app-card {
       background: white;
       padding: 35px;
@@ -88,17 +102,22 @@
       transform: translateY(-8px);
       box-shadow: 0 25px 35px rgba(0,0,0,0.12);
     }
+
     .app-top {
       display: flex;
       gap: 25px;
       align-items: center;
     }
     .icon-box {
-      width: 90px; height: 90px;
+      width: 90px;
+      height: 90px;
       border-radius: 22px;
       background: #007aff;
-      display: flex; justify-content: center; align-items: center;
-      font-size: 46px; color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 46px;
+      color: white;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       flex: 0 0 auto;
     }
@@ -108,9 +127,11 @@
       margin-bottom: 6px;
     }
     .app-card p {
-      color: #555; font-size: 16px; margin: 20px 0;
+      color: #555;
+      font-size: 16px;
+      margin: 20px 0;
     }
-    /* APP STORE BUTTON */
+
     .app-store-button {
       background: #000;
       padding: 12px 20px;
@@ -124,8 +145,11 @@
       margin-top: 10px;
       transition: 0.2s ease;
     }
-    .app-store-button:hover { background: #333; transform: translateY(-2px); }
-    /* QR BLOCK */
+    .app-store-button:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+
     .qr-block { text-align: center; margin-top: 25px; }
     .qr-block img {
       width: 150px;
@@ -136,7 +160,7 @@
       transition: 0.25s ease;
     }
     .qr-block img:hover { transform: scale(1.05); }
-    /* NEW TOOLS BLOCK */
+
     .new-tools {
       background: #f2f5ff;
       border: 1px solid #dce6ff;
@@ -161,27 +185,46 @@
       font-size: 14px;
       color: #333;
     }
-    /* GRID — UPDATED FOR 5 CARDS */
+
+    /* ── GRID LAYOUT ─────────────────────────────────────── */
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 40px;
       align-items: start;
       grid-template-areas:
-        "smart   umrah"
-        "smart   aura"
-        "flux    aura"
-        "decon   soon";
+        "smart umrah"
+        "smart aura"
+        "flux  decon"
+        "beads  soon";
     }
+
     .grid-smart { grid-area: smart; }
     .grid-umrah { grid-area: umrah; }
-    .grid-aura  { grid-area: aura; }
-    .grid-flux  { grid-area: flux; }
+    .grid-aura  { grid-area: aura;  }
+    .grid-flux  { grid-area: flux;  }
     .grid-decon { grid-area: decon; }
-    .grid-soon  { grid-area: soon; }
-    /* Keep left hero card a bit more premium */
+    .grid-beads { grid-area: beads; }
+    .grid-soon  { grid-area: soon;  }
+
     .grid-smart.app-card { padding: 40px; }
-    /* VISION */
+
+    @media (max-width: 900px) {
+      .apps-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "smart"
+          "umrah"
+          "aura"
+          "flux"
+          "decon"
+          "beads"
+          "soon";
+      }
+      .grid-smart.app-card { padding: 35px; }
+    }
+
+    /* ── VISION ── */
     .vision-section {
       padding: 100px 20px;
       background: white;
@@ -202,13 +245,13 @@
     .vision-content ul {
       list-style: square;
       padding-left: 22px;
-      margin-top: 10px;
-      margin-bottom: 25px;
+      margin: 10px 0 25px;
       color: #333;
       font-size: 17px;
       line-height: 1.7;
     }
-    /* TERMS */
+
+    /* ── PRIVACY / TERMS ── */
     .terms-section {
       padding: 90px 20px;
       background: #f9f9f9;
@@ -219,7 +262,7 @@
       font-size: 28px;
       font-weight: 700;
     }
-    /* FOOTER */
+
     footer {
       text-align: center;
       padding: 40px;
@@ -227,23 +270,10 @@
       border-top: 1px solid rgba(0,0,0,0.08);
     }
     footer p { color: #555; margin-bottom: 10px; }
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .apps-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "smart"
-          "umrah"
-          "aura"
-          "flux"
-          "decon"
-          "soon";
-      }
-      .grid-smart.app-card { padding: 35px; }
-    }
   </style>
 </head>
 <body>
+
 <header>
   <div class="container">
     <nav>
@@ -264,14 +294,13 @@
   <div class="divider"></div>
 </section>
 
-<!-- ============================================================= -->
 <!-- FEATURED APPS -->
-<!-- ============================================================= -->
 <section class="container" id="apps" style="padding: 80px 0;">
   <h2 class="section-title">Featured Apps</h2>
+
   <div class="apps-grid">
 
-    <!-- SMART-POCKET (LEFT HERO) -->
+    <!-- SMART-POCKET (spans two rows) -->
     <div class="app-card grid-smart">
       <div class="app-top">
         <div class="icon-box">🛠️</div>
@@ -280,14 +309,10 @@
           <span style="font-size:14px; color:#007aff; font-weight:600;">Most Popular</span>
         </div>
       </div>
-      <p>
-        Smart-Pocket is your all-in-one iOS utility suite — calculators, converters, notes, todos, password generation,
-        OCR text scanning, QR tools, finance tools, weather, and more. Clean. Fast. Reliable.
-      </p>
+      <p>Smart-Pocket is your all-in-one iOS utility suite — calculators, converters, notes, todos, password generation, OCR text scanning, QR tools, finance tools, weather, and more. Clean. Fast. Reliable.</p>
+
       <div class="new-tools">
-        <div class="new-tools-title">🔵 What's New in v1.8<br>
-          <span style="font-size:13px; font-weight:500; color:#666;">Released 20 Nov 2025</span>
-        </div>
+        <div class="new-tools-title">🔵 What's New in v1.8<br><span style="font-size:13px; font-weight:500; color:#666;">Released 20 Nov 2025</span></div>
         <div class="new-tools-list">
           <div>🍅 Pomodoro Timer</div>
           <div>🔗 URL Saver</div>
@@ -298,11 +323,9 @@
           <div>🧩 Image → SVG</div>
         </div>
       </div>
+
       <div class="new-tools coming-tools">
-        <div class="new-tools-title" style="color:#d46b00;">
-          🔥 What's New in v1.9<br>
-          <span style="font-size:13px; font-weight:500; color:#a45b00;">Released 15 Jan 2026</span>
-        </div>
+        <div class="new-tools-title" style="color:#d46b00;">🔥 What's New in v1.9<br><span style="font-size:13px; font-weight:500; color:#a45b00;">Released 15 Jan 2026</span></div>
         <div class="new-tools-list">
           <div>🧠 KnowledgeBase</div>
           <div>🧭 Altimeter</div>
@@ -312,10 +335,9 @@
           <div>✨ UI Cleanup</div>
         </div>
       </div>
-      <div style="text-align: center;">
-        <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">
-          📱 Download on the App Store
-        </a>
+
+      <div style="text-align:center;">
+        <a href="https://apps.apple.com/gb/app/smart-pocket/id6753141793" class="app-store-button">📱 Download on the App Store</a>
       </div>
       <div class="qr-block">
         <p><strong>Scan to download</strong></p>
@@ -323,17 +345,14 @@
       </div>
     </div>
 
-    <!-- UMRAH -->
+    <!-- UMRAH COMPANION -->
     <div class="app-card grid-umrah">
       <div class="app-top">
         <div class="icon-box" style="background:#c9a043;">🕋</div>
         <div><h3>Umrah Companion</h3></div>
       </div>
-      <p>
-        Your serene, offline-first guide for the sacred pilgrimage — step-by-step Umrah walkthrough,
-        beautiful Arabic duas, translations, maps for Makkah & Madinah, and full audio support with
-        personal iCloud recordings and premium reciter packs via On-Demand Resources.
-      </p>
+      <p>Your serene, offline-first guide for the sacred pilgrimage — step-by-step Umrah walkthrough, beautiful Arabic duas, translations, maps for Makkah & Madinah, and full audio support with personal iCloud recordings and premium reciter packs via On-Demand Resources.</p>
+
       <div class="new-tools">
         <div class="new-tools-title">✨ Core Features</div>
         <div class="new-tools-list">
@@ -345,10 +364,9 @@
           <div>🔁 Loop Playback</div>
         </div>
       </div>
-      <div style="text-align: center;">
-        <a href="https://apps.apple.com/gb/app/umrah-companion/id6755516013" class="app-store-button">
-          📱 Download on the App Store
-        </a>
+
+      <div style="text-align:center;">
+        <a href="https://apps.apple.com/gb/app/umrah-companion/id6755516013" class="app-store-button">📱 Download on the App Store</a>
       </div>
       <div class="qr-block">
         <p><strong>Scan to download</strong></p>
@@ -365,10 +383,8 @@
           <span style="font-size:14px; color:#7b7bff; font-weight:600;">Coming Jan 2026</span>
         </div>
       </div>
-      <p>
-        Drift away in seconds. <strong>Aura</strong> reimagines the sleep app experience by combining 3D spatial audio
-        with mesmerizing, hypnotic visual particles. Designed to calm the restless mind, it features exclusive <strong>ASMR</strong> from world-class creators, cinematic soundscapes, and a dark "glass" aesthetic built for the night.
-      </p>
+      <p>Drift away in seconds. <strong>Aura</strong> reimagines the sleep app experience by combining 3D spatial audio with mesmerizing, hypnotic visual particles. Designed to calm the restless mind, it features exclusive <strong>ASMR</strong> from world-class creators, cinematic soundscapes, and a dark "glass" aesthetic built for the night.</p>
+
       <div class="new-tools">
         <div class="new-tools-title">🌙 Core Features</div>
         <div class="new-tools-list">
@@ -380,6 +396,7 @@
           <div>🔒 Background Play</div>
         </div>
       </div>
+
       <div class="new-tools coming-tools" style="margin-top:14px;">
         <div class="new-tools-title" style="color:#6b4eff;">🧠 Key Tech</div>
         <div class="new-tools-list">
@@ -391,13 +408,13 @@
           <div>🚀 Smart Caching</div>
         </div>
       </div>
+
       <p style="font-size:14px; color:#666; margin-top:18px;">
         <strong>Highlight:</strong> Smart caching guarantees zero-latency, offline-ready playback while minimizing data usage.
       </p>
-      <div style="text-align: center;">
-        <a href="https://apps.apple.com/gb/app/aura-whispered-calm/id6757266226" class="app-store-button">
-          📱 Download on the App Store
-        </a>
+
+      <div style="text-align:center;">
+        <a href="https://apps.apple.com/gb/app/aura-whispered-calm/id6757266226" class="app-store-button">📱 Download on the App Store</a>
       </div>
       <div class="qr-block">
         <p><strong>Scan to download</strong></p>
@@ -414,10 +431,8 @@
           <span style="font-size:14px; color:#7b7bff; font-weight:600;">Released 12 Jan 2026</span>
         </div>
       </div>
-      <p>
-        A no-nonsense audio + visual player — everything you need for smooth playback, queues, and library control,
-        with a clean interface and zero unnecessary extras.
-      </p>
+      <p>A no-nonsense audio + visual player — everything you need for smooth playback, queues, and library control, with a clean interface and zero unnecessary extras.</p>
+
       <div class="new-tools">
         <div class="new-tools-title">🎛 Core Features</div>
         <div class="new-tools-list">
@@ -429,10 +444,9 @@
           <div>⚡ Fast & Lightweight</div>
         </div>
       </div>
-      <div style="text-align: center;">
-        <a href="https://apps.apple.com/gb/app/fluxplayer/id6757675334" class="app-store-button">
-          📱 Download on the App Store
-        </a>
+
+      <div style="text-align:center;">
+        <a href="https://apps.apple.com/gb/app/fluxplayer/id6757675334" class="app-store-button">📱 Download on the App Store</a>
       </div>
       <div class="qr-block">
         <p><strong>Scan to download</strong></p>
@@ -446,10 +460,8 @@
         <div class="icon-box" style="background:#222;">🎬</div>
         <div><h3>Deconstructr</h3></div>
       </div>
-      <p>
-        Your private, on-device video studio. Trim with precision, manage extracted audio,
-        and unlock Pro tools — Frames, GIFs, Stitching, Slow Motion, Rewind, and Image Enhancement.
-      </p>
+      <p>Your private, on-device video studio. Trim with precision, manage extracted audio, and unlock Pro tools — Frames, GIFs, Stitching, Slow Motion, Rewind, and Image Enhancement.</p>
+
       <div class="new-tools">
         <div class="new-tools-title">🔒 On-Device by Design</div>
         <div class="new-tools-list">
@@ -461,18 +473,51 @@
           <div>🐢 Slow Motion + Rewind</div>
         </div>
       </div>
-      <p style="font-size:14px; color:#666; margin-top: 20px;">
+
+      <p style="font-size:14px; color:#666; margin-top:20px;">
         Everything runs locally. No cloud processing. No accounts. No ads.
       </p>
-      <div style="text-align: center; margin-top: 24px;">
-        <!-- Replace href with real App Store link when available -->
-        <a href="https://apps.apple.com/gb/app/deconstructr/id6753918181" class="app-store-button">
-          📱 Download on the App Store
-        </a>
+
+      <div style="text-align:center; margin-top:24px;">
+        <a href="https://apps.apple.com/…" class="app-store-button">📱 Download on the App Store</a>
       </div>
       <div class="qr-block">
         <p><strong>Scan to download</strong></p>
-        <img src="deconstructr-qr.png" alt="Deconstructr QR Code"/>
+        <img src="deconstructr-qr.jpeg" alt="Deconstructr QR Code"/>
+      </div>
+    </div>
+
+    <!-- BEADS / TASBIH -->
+    <div class="app-card grid-beads">
+      <div class="app-top">
+        <div class="icon-box" style="background:#2c3e50;">🧿</div>
+        <div>
+          <h3>Tasbih Beads</h3>
+          <span style="font-size:14px; color:#e67e22; font-weight:600;">New</span>
+        </div>
+      </div>
+      <p>Beautiful, distraction-free digital tasbih with smart counter, multiple dhikr presets, vibration & sound feedback, dark mode, iCloud sync across devices, and elegant haptic experience — perfect for daily dhikr and mindful remembrance.</p>
+
+      <div class="new-tools">
+        <div class="new-tools-title">🧿 Core Features</div>
+        <div class="new-tools-list">
+          <div>🧮 Smart Counter (9999+)</div>
+          <div>📋 Multiple Dhikr Presets</div>
+          <div>🎵 Gentle Sound & Vibration</div>
+          <div>🌙 True Dark Mode</div>
+          <div>☁️ iCloud Progress Sync</div>
+          <div>✨ Haptic Feedback</div>
+          <div>🔒 Completely Private</div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:28px;">
+        <!-- Update with real link when published -->
+        <a href="https://apps.apple.com/…" class="app-store-button">📱 Download on the App Store</a>
+      </div>
+      <div class="qr-block">
+        <p><strong>Scan to download</strong></p>
+        <img src="beads-qr.png" alt="Tasbih Beads QR Code"/>
       </div>
     </div>
 
@@ -483,24 +528,20 @@
         <div><h3>Coming Soon</h3></div>
       </div>
       <p>New apps launching throughout 2026 — focused, purposeful, and designed with meaningful use-cases in mind.</p>
-      <div style="text-align: center; margin-top: 80px;">
-        <span class="app-store-button" style="background:#999; cursor:not-allowed;">
-          Coming Soon
-        </span>
+
+      <div style="text-align:center; margin-top:80px;">
+        <span class="app-store-button" style="background:#999; cursor:not-allowed;">Coming Soon</span>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ============================================================= -->
 <!-- VISION -->
-<!-- ============================================================= -->
 <section class="vision-section" id="vision">
   <div class="vision-content">
     <h2>The Vision</h2>
-    <p>We build iOS apps focused on clarity, simplicity and real everyday usefulness. Every feature has intention — nothing added for padding or gimmicks.
-       Clean execution, honest pricing, and a focus on quality define all development decisions.</p>
+    <p>We build iOS apps focused on clarity, simplicity and real everyday usefulness. Every feature has intention — nothing added for padding or gimmicks. Clean execution, honest pricing, and a focus on quality define all development decisions.</p>
     <p>My principles are simple:</p>
     <ul>
       <li>No ads — ever</li>
@@ -512,38 +553,40 @@
   </div>
 </section>
 
-<!-- ============================================================= -->
 <!-- PRIVACY POLICY -->
-<!-- ============================================================= -->
 <section class="terms-section" id="terms">
   <div class="container">
     <h2>Privacy Policy</h2>
     <p><strong>Apps developed by VisionaryAI Labs respect your privacy. This policy explains how the apps handle your data.</strong></p>
+
     <p><strong>1. Data Collection</strong><br>
     Our apps do not collect, store, or share any personal data. All information remains on your device.</p>
+
     <p><strong>2. Tools That Use Device Features</strong><br>
     <em>Camera:</em> Used for QR scanning, magnifier, and card capture. Images are processed locally and not shared.<br>
     <em>Microphone:</em> Used for the voice recorder tool. Recordings stay on your device.<br>
     <em>Face ID / Touch ID:</em> Used only to secure access to the app. Biometric data never leaves your device.<br>
     <em>Clipboard:</em> The clipboard manager only stores copied items locally.<br>
     <em>Network Access:</em> Some tools fetch data (currency rates, crypto, weather, IP info) from third-party public APIs. No personal information is transmitted.</p>
+
     <p><strong>3. Third-Party Services</strong><br>
     Our apps may connect to public APIs (e.g., currency exchange, weather). These services may receive standard network requests but no personal user data.</p>
+
     <p><strong>4. Children’s Privacy</strong><br>
     Our apps are suitable for all ages and do not target children with any data collection.</p>
+
     <p><strong>5. Contact</strong><br>
     If you have questions about this Privacy Policy, contact:<br>
     Email: visionaryailabs1@gmail.com</p>
   </div>
 </section>
 
-<!-- ============================================================= -->
 <!-- FOOTER -->
-<!-- ============================================================= -->
 <footer id="contact">
   <p>© 2025 V.I.S.I.O.N — iOS Apps Built With Purpose</p>
   <p>For enquiries, you can WhatsApp me on <strong>+44 7595 003 096</strong> — please include the nature of your message</p>
   <p>Email: visionaryailabs1@gmail.com</p>
 </footer>
+
 </body>
 </html>
